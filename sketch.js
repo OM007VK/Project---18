@@ -39,10 +39,11 @@ function preload(){
 function setup() {
   createCanvas(windowWidth,windowHeight);
   //windowWidth, windowHeight
-  trex = createSprite(100,height-20,20,50);
+  trex = createSprite(100,height-40,20,50);
   trex.addAnimation("collided", trex_collided);
   trex.addAnimation("trex1.png")
-  trex.scale = 0.6;
+  trex.scale = 0.3;
+  //console.log(widt
   
   //BG = createSprite(200,height-20,400,20);
   //groundImage.scale = 0.5;
@@ -151,7 +152,7 @@ function spawnClouds() {
 
 function spawnObstacles() {
   if(frameCount % 100 === 0) {
-    var obstacle = createSprite(600,height-60 ,10,30);
+    var obstacle = createSprite(600,height-40,10,30);
     //obstacle.debug = true;
     obstacle.velocityX = -(6 + 3*score/100);
     
@@ -174,7 +175,7 @@ function spawnObstacles() {
     }
     
     //assign scale and lifetime to the obstacle           
-    obstacle.scale = 0.2;
+    obstacle.scale = 0.1;
     obstacle.lifetime = 300;
     //add each obstacle to the group
     obstaclesGroup.add(obstacle);
